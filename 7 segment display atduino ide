@@ -1,0 +1,107 @@
+int segmento[8] = {PC0, PC1, PC2, PC3, PC4, PC5, PC6, PC7};
+
+
+void SEGMENTO(int A, int B, int C, int D, int E, int F, int G, int H) {
+  int valores[] = {A, B, C, D, E, F, G, H};
+
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(segmento[i], valores[i]);
+  }
+}
+
+
+void setup() {
+  for (int i = 0; i < 8; i++) {
+    pinMode(segmento[i], OUTPUT);
+  }
+
+  Serial.begin(9600);
+}
+
+
+
+
+void numeroCERO() {
+  SEGMENTO(0,0,0,0,0,0,1,1);
+}
+void numeroUNO() {
+  SEGMENTO(1,0,0,1,1,1,1,1);
+}
+void numeroDOS() {
+  SEGMENTO(0,0,1,0,0,1,0,1);
+}
+void numeroTRES() {
+  SEGMENTO(0,0,0,0,1,1,0,1);
+}
+void numeroCUATRO() {
+  SEGMENTO(1,0,0,1,1,0,0,1);
+}
+void numeroCINCO() {
+  SEGMENTO(0,1,0,0,1,0,0,1);
+}
+void numeroSEIS() {
+  SEGMENTO(0,1,0,0,0,0,0,1);
+}
+void numeroSIETE() {
+  SEGMENTO(0,0,0,1,1,1,1,1);
+}
+void numeroOCHO() {
+  SEGMENTO(0,0,0,0,0,0,0,1);
+}
+void numeroNUEVE() {
+  SEGMENTO(0,0,0,0,1,0,0,1);
+}
+
+void PUNTO() {
+  SEGMENTO(1,1,1,1,1,1,1,0);
+}
+
+
+void loop() {
+
+
+
+
+  numeroCERO();
+delay(500);
+
+  numeroUNO();
+
+delay(500);
+
+  numeroDOS();
+delay(500);
+
+  numeroTRES();
+delay(500);
+
+
+  numeroCUATRO();
+delay(500);
+
+
+  numeroCINCO();
+delay(500);
+  numeroSEIS();
+
+
+delay(500);
+  numeroSIETE();
+
+delay(500);
+  numeroOCHO();
+
+
+  delay(500);
+
+  numeroNUEVE();
+
+delay(500);
+
+  PUNTO();
+delay(500);
+
+
+
+
+}
