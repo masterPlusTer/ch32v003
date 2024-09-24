@@ -1,8 +1,12 @@
+
 int segmento[8] = {PC0, PC1, PC2, PC3, PC4, PC5, PC6, PC7};
+
+// funcion para asignar HIGH o LOW a cada segmento (HIGH = 1 Y LOW = 0  y como es catodo comun el HIGH apaga el segmento y el LOW lo enciende)
 
 
 void SEGMENTO(int A, int B, int C, int D, int E, int F, int G, int H) {
   int valores[] = {A, B, C, D, E, F, G, H};
+
 
   for (int i = 0; i < 8; i++) {
     digitalWrite(segmento[i], valores[i]);
@@ -11,6 +15,9 @@ void SEGMENTO(int A, int B, int C, int D, int E, int F, int G, int H) {
 
 
 void setup() {
+
+// configurar los pines como OUTPUT, como son muchos se pueden configurar en bucle para no repetir codigo.
+
   for (int i = 0; i < 8; i++) {
     pinMode(segmento[i], OUTPUT);
   }
@@ -19,7 +26,7 @@ void setup() {
 }
 
 
-
+// una funcion para cada numero (esto es una porqueria, ya lo mejorare)
 
 void numeroCERO() {
   SEGMENTO(0,0,0,0,0,0,1,1);
@@ -60,7 +67,7 @@ void PUNTO() {
 void loop() {
 
 
-
+//llamada a las funciones para formar los numeros
 
   numeroCERO();
 delay(500);
@@ -105,3 +112,10 @@ delay(500);
 
 
 }
+
+
+
+
+//+Ter
+
+
