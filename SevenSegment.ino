@@ -26,92 +26,49 @@ void setup() {
 }
 
 
-// una funcion para cada numero (esto es una porqueria, ya lo mejorare)
+const int segmentos[] = {2, 3, 4, 5, 6, 7, 8, 9}; // Ajusta los números según tus pines
+const int configuraciones[10][8] = {
+  {0, 0, 0, 0, 0, 0, 1, 1}, // 0
+  {1, 0, 0, 1, 1, 1, 1, 1}, // 1
+  {0, 0, 1, 0, 0, 1, 0, 1}, // 2
+  {0, 0, 0, 0, 1, 1, 0, 1}, // 3
+  {1, 0, 0, 1, 1, 0, 0, 1}, // 4
+  {0, 1, 0, 0, 1, 0, 0, 1}, // 5
+  {0, 1, 0, 0, 0, 0, 0, 1}, // 6
+  {0, 0, 0, 1, 1, 1, 1, 1}, // 7
+  {0, 0, 0, 0, 0, 0, 0, 1}, // 8
+  {0, 0, 0, 0, 1, 0, 0, 1}  // 9
+};
 
-void numeroCERO() {
-  SEGMENTO(0,0,0,0,0,0,1,1);
-}
-void numeroUNO() {
-  SEGMENTO(1,0,0,1,1,1,1,1);
-}
-void numeroDOS() {
-  SEGMENTO(0,0,1,0,0,1,0,1);
-}
-void numeroTRES() {
-  SEGMENTO(0,0,0,0,1,1,0,1);
-}
-void numeroCUATRO() {
-  SEGMENTO(1,0,0,1,1,0,0,1);
-}
-void numeroCINCO() {
-  SEGMENTO(0,1,0,0,1,0,0,1);
-}
-void numeroSEIS() {
-  SEGMENTO(0,1,0,0,0,0,0,1);
-}
-void numeroSIETE() {
-  SEGMENTO(0,0,0,1,1,1,1,1);
-}
-void numeroOCHO() {
-  SEGMENTO(0,0,0,0,0,0,0,1);
-}
-void numeroNUEVE() {
-  SEGMENTO(0,0,0,0,1,0,0,1);
-}
 
-void PUNTO() {
-  SEGMENTO(1,1,1,1,1,1,1,0);
-}
 
+void mostrarNumero(int numero) {
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(segmentos[i], configuraciones[numero][i]);
+  }
+}
 
 void loop() {
 
+      //descomentar para mostrar todos los numeros uno por uno
 
-//llamada a las funciones para formar los numeros
-
-  numeroCERO();
-delay(500);
-
-  numeroUNO();
-
-delay(500);
-
-  numeroDOS();
-delay(500);
-
-  numeroTRES();
-delay(500);
-
-
-  numeroCUATRO();
-delay(500);
-
-
-  numeroCINCO();
-delay(500);
-  numeroSEIS();
-
-
-delay(500);
-  numeroSIETE();
-
-delay(500);
-  numeroOCHO();
-
-
-  delay(500);
-
-  numeroNUEVE();
-
-delay(500);
-
-  PUNTO();
-delay(500);
+ // for (int i = 0; i < 10; i++) {
+  //  mostrarNumero(i);
+ // }
 
 
 
+
+mostrarNumero(7);
+
+    delay(500);
 
 }
+
+
+
+
+//+Ter
 
 
 
