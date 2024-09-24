@@ -26,8 +26,8 @@ void setup() {
 }
 
 
-const int segmentos[] = {2, 3, 4, 5, 6, 7, 8, 9}; // Ajusta los números según tus pines
-const int configuraciones[10][8] = {
+const int configuraciones[11][8] = {
+   
   {0, 0, 0, 0, 0, 0, 1, 1}, // 0
   {1, 0, 0, 1, 1, 1, 1, 1}, // 1
   {0, 0, 1, 0, 0, 1, 0, 1}, // 2
@@ -37,31 +37,32 @@ const int configuraciones[10][8] = {
   {0, 1, 0, 0, 0, 0, 0, 1}, // 6
   {0, 0, 0, 1, 1, 1, 1, 1}, // 7
   {0, 0, 0, 0, 0, 0, 0, 1}, // 8
-  {0, 0, 0, 0, 1, 0, 0, 1}  // 9
+  {0, 0, 0, 0, 1, 0, 0, 1}, // 9
+  {1, 1, 1, 1, 1, 1, 1, 0}  // .
+
 };
 
 
 
 void mostrarNumero(int numero) {
   for (int i = 0; i < 8; i++) {
-    digitalWrite(segmentos[i], configuraciones[numero][i]);
+    digitalWrite(segmento[i], configuraciones[numero][i]);
   }
 }
 
 void loop() {
 
-      //descomentar para mostrar todos los numeros uno por uno
 
- // for (int i = 0; i < 10; i++) {
-  //  mostrarNumero(i);
+
+//descomentar el for para mostrar todos los numeros de a uno
+ // for (int i = 0; i < 11; i++) {
+ //   mostrarNumero(i);
+ //   delay(500);
  // }
 
 
-
-
-mostrarNumero(7);
-
-    delay(500);
+mostrarNumero(5);
+delay(500);
 
 }
 
@@ -70,9 +71,5 @@ mostrarNumero(7);
 
 //+Ter
 
-
-
-
-//+Ter
 
 
