@@ -1,7 +1,7 @@
 
 int segmento[8] = {PC0, PC1, PC2, PC3, PC4, PC5, PC6, PC7};
 
-// funcion para asignar HIGH o LOW a cada segmento (HIGH = 1 Y LOW = 0  y como es catodo comun el HIGH apaga el segmento y el LOW lo enciende)
+// funcion para asignar HIGH o LOW a cada segmento (HIGH = 1 Y LOW = 0  y como es anodo comun el HIGH apaga el segmento y el LOW lo enciende)
 
 
 void SEGMENTO(int A, int B, int C, int D, int E, int F, int G, int H) {
